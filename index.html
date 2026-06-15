@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budaya Positif Sekolah 5S (Jepang) - Security Core</title>
-    <!-- Google Fonts: JetBrains Mono untuk kesan coding/terminal -->
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
         /* Reset dasar untuk margin dan padding */
@@ -32,7 +31,7 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             color: white;
-            padding: 1.2rem 8%;
+            padding: 0.8rem 8%; /* Sedikit dikurangi agar vertikal logo seimbang */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -60,6 +59,11 @@
             font-size: 1rem;
         }
 
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
         header nav a {
             color: #94a3b8;
             text-decoration: none;
@@ -72,6 +76,26 @@
         header nav a:hover {
             color: #06b6d4; 
             text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+        }
+
+        /* Style Logo SMKN 36 Jakarta di Pojok Kanan Atas */
+        .school-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            margin-left: 28px;
+            border-radius: 6px;
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            padding: 2px;
+            background: rgba(15, 23, 42, 0.6);
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .school-logo:hover {
+            border-color: #06b6d4;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.7);
+            transform: scale(1.05);
         }
 
         /* Kontainer Utama */
@@ -242,8 +266,15 @@
                 gap: 15px;
                 padding: 1.5rem;
             }
+            header nav {
+                justify-content: center;
+                width: 100%;
+            }
             header nav a {
                 margin: 0 10px;
+            }
+            .school-logo {
+                margin-left: 10px;
             }
             .container {
                 margin: 20px auto;
@@ -259,12 +290,12 @@
             <a href="index.html">// Beranda</a>
             <a href="#">// Tentang</a>
             <a href="Kontak.html">// Kontak</a>
+            <img src="image_094a06.jpg" alt="Logo SMKN 36 Jakarta" class="school-logo">
         </nav>
     </header>
 
     <div class="container">
         <main class="main-content">
-            <!-- Tambahan Data Jaringan/IT -->
             <div class="sys-status">
                 [PACKET_STATUS]: <span>DECRYPTED</span> | [PORT]: 8080 | [BANDWIDTH]: OPTIMAL | [SYS_LOG]: 5S_FRAMEWORK_LOADED
             </div>
