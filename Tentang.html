@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh & Gambar Budaya 5S</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Reset dasar untuk margin dan padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'JetBrains Mono', -apple-system, monospace;
+        }
+
+        body {
+            background-color: #020617; /* Hitam pekat / Slate 950 */
+            background-image: 
+                linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        /* Navigasi / Header */
+        header {
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: white;
+            padding: 0.8rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #06b6d4;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #06b6d4;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        header .logo::before {
+            content: "";
+            color: #10b981;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.25s ease;
+        }
+
+        header nav a:hover, header nav a.active {
+            color: #06b6d4; 
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+        }
+
+        .school-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            margin-left: 28px;
+            border-radius: 6px;
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            padding: 2px;
+            background: rgba(15, 23, 42, 0.6);
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+        }
+
+        .logo-left {
+            margin-left: 6px;
+            margin-right: 2px;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 24px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .page-title h1 span {
+            color: #06b6d4;
+            text-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+
+        /* Grid Framework untuk Kartu 5S */
+        .s5-grid {
+            display: block; /* Menghindari flex/grid di level body/container utama untuk kompatibilitas */
+        }
+
+        .s5-card {
+            background: #0b1329;
+            border: 1px solid #06b6d4;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Gaya Terminal Window Top Bar */
+        .s5-card::before {
+            content: "● ● ● s5_system_node.sh";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #1e293b;
+            padding: 6px 20px;
+            font-size: 0.75rem;
+            color: #38bdf8;
+            font-weight: bold;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        /* Pembagian Layout Tabel Kuno/Aman untuk Kiri-Kanan */
+        .card-table {
+            display: table;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .card-cell {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .cell-text {
+            width: 60%;
+            padding-right: 25px;
+        }
+
+        .cell-img {
+            width: 40%;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .s5-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .s5-card h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .s5-card h2 span {
+            color: #06b6d4;
+        }
+
+        .s5-card p {
+            color: #94a3b8;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .example-box {
+            background: rgba(2, 6, 23, 0.5);
+            border-left: 3px solid #10b981;
+            padding: 12px 15px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .example-box h4 {
+            color: #10b981;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .example-box ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        .example-box ul li {
+            font-size: 0.88rem;
+            color: #cbd5e1;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .example-box ul li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: #06b6d4;
+        }
+
+        /* Desain Frame Gambar */
+        .img-container {
+            border: 2px dashed rgba(6, 182, 212, 0.4);
+            padding: 6px;
+            border-radius: 8px;
+            background: #020617;
+            display: inline-block;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .s5-img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+            filter: grayscale(20%) contrast(110%);
+        }
+
+        /* Tombol Kembali */
+        .btn-back-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn-back {
+            display: inline-block;
+            color: #10b981;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 12px 28px;
+            background: rgba(16, 185, 129, 0.05);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 6px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-back:hover {
+            color: #ffffff;
+            background: #10b981;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        }
+
+        footer {
+            background-color: #020617;
+            color: #475569;
+            text-align: center;
+            padding: 40px;
+            margin-top: 80px;
+            font-size: 0.85rem;
+            border-top: 2px solid rgba(6, 182, 212, 0.1);
+        }
+
+        footer span {
+            color: #10b981;
+        }
+
+        /* Responsif Seluler */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 1.5rem;
+            }
+            header nav a {
+                margin: 0 10px;
+            }
+            .card-table, .card-cell {
+                display: block;
+                width: 100%;
+            }
+            .cell-text {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+            .img-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="cropped-smkn-36-jakarta-logo-2.webp" alt="Logo SMKN 36" class="school-logo logo-left">
+            Budaya 5S
+        </div>
+        <nav>
+            <a href="index.html">// Beranda</a>
+            <a href="#" class="active">// Galeri & Contoh</a>
+            <img src="logotkjsmkn36.png" alt="Logo SMKN 36" class="school-logo">
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-title">
+            <h1>Contoh Implementasi <span>Budaya 5S</span></h1>
+        </div>
+
+        <div class="s5-grid">
+            
+            <div class="s5-card">
+                <div class="card-table">
+                    <div class="card-cell cell-text">
+                        <span class="s5-badge">Langkah 1</span>
+                        <h2>Seiri <span>(整理 / Ringkas)</span></h2>
+                        <p>Memilah barang antara yang masih diperlukan dengan yang tidak diperlukan, lalu menyingkirkan barang yang tidak digunakan dari area kerja agar ruang gerak menjadi efisien.</p>
+                        <div class="example-box">
+                            <h4>Contoh Nyata:</h4>
+                            <ul>
+                                <li>Membuang sampah kertas dan komponen rusak dari meja kerja.</li>
+                                <li>Menghapus file-file sampah (*junk files*) dari penyimpanan komputer bengkel.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-cell cell-img">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80" alt="Ilustrasi Seiri" class="s5-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="s5-card">
+                <div class="card-table">
+                    <div class="card-cell cell-text">
+                        <span class="s5-badge">Langkah 2</span>
+                        <h2>Seiton <span>(整頓 / Rapi)</span></h2>
+                        <p>Menata dan menempatkan barang-barang yang diperlukan pada tempat yang tepat sehingga mudah ditemukan saat dibutuhkan dan mempercepat alur kerja.</p>
+                        <div class="example-box">
+                            <h4>Contoh Nyata:</h4>
+                            <ul>
+                                <li>Menyusun alat praktis jaringan (tang crimping, tester) di rak berlabel khusus.</li>
+                                <li>Menaruh obeng dan perkakas sesuai ukurannya di papan gantung alat (*shadow board*).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-cell cell-img">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=400&q=80" alt="Ilustrasi Seiton" class="s5-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="s5-card">
+                <div class="card-table">
+                    <div class="card-cell cell-text">
+                        <span class="s5-badge">Langkah 3</span>
+                        <h2>Seiso <span>(清掃 / Resik)</span></h2>
+                        <p>Membersihkan area kerja, peralatan, dan lingkungan sekitar dari kotoran atau debu agar peralatan tidak mudah rusak serta menjamin kenyamanan.</p>
+                        <div class="example-box">
+                            <h4>Contoh Nyata:</h4>
+                            <ul>
+                                <li>Menyapu lantai laboratorium komputer setelah jam pelajaran usai.</li>
+                                <li>Membersihkan casing router dan komputer praktek dari tumpukan debu.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-cell cell-img">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80" alt="Ilustrasi Seiso" class="s5-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="s5-card">
+                <div class="card-table">
+                    <div class="card-cell cell-text">
+                        <span class="s5-badge">Langkah 4</span>
+                        <h2>Seiketsu <span>(清潔 / Rawat)</span></h2>
+                        <p>Mempertahankan kondisi ringkas, rapi, dan resik yang telah dicapai melalui standarisasi aturan tertulis demi keberlanjutan sistem.</p>
+                        <div class="example-box">
+                            <h4>Contoh Nyata:</h4>
+                            <ul>
+                                <li>Membuat jadwal piket harian pemeliharaan laboratorium komputer.</li>
+                                <li>Menempelkan checklist penilaian kerapihan di dinding kelas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-cell cell-img">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80" alt="Ilustrasi Seiketsu" class="s5-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="s5-card">
+                <div class="card-table">
+                    <div class="card-cell cell-text">
+                        <span class="s5-badge">Langkah 5</span>
+                        <h2>Shitsuke <span>(躾 / Rajin)</span></h2>
+                        <p>Membiasakan diri menjalankan prinsip 5S setiap hari atas kesadaran penuh tanpa perlu diperintah, sehingga menjadi karakter kerja yang profesional.</p>
+                        <div class="example-box">
+                            <h4>Contoh Nyata:</h4>
+                            <ul>
+                                <li>Sadar diri membuang sampah pada tempatnya meskipun tidak diawasi guru.</li>
+                                <li>Secara otomatis merapikan kursi kelas kembali ke bawah meja sebelum pulang sekolah.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-cell cell-img">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Ilustrasi Shitsuke" class="s5-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="btn-back-container">
+            <a href="index.html" class="btn-back">← Kembali ke Beranda Utama</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kelompok Mikrotik. <span>SMK Negeri 36 Jakarta</span>. System Framework Secure_</p>
+    </footer>
+
+</body>
+</html>
